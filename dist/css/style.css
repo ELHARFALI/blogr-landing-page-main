@@ -1,8 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 .header {
-  background-color: hsl(13deg, 100%, 72%);
+  background-color: hsl(353deg, 100%, 62%);
   padding: 20px;
+  border-radius: 0 0 0 100px;
+  position: relative;
+  background-image: url(/images/bg-pattern-intro-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: -700px;
+  background-size: 200%;
+}
+@media (max-width: 991px) {
+  .header {
+    background-image: url(/images/bg-pattern-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 500%;
+  }
 }
 .header .container {
   width: 90%;
@@ -41,6 +55,37 @@
   .header .container .navbar .lists .button {
     position: absolute;
     right: 0;
+    display: flex;
+  }
+  .header .container .navbar .lists .button .login {
+    cursor: pointer;
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: transparent;
+    color: hsl(0deg, 0%, 100%);
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 22px;
+    border-radius: 50px;
+  }
+  .header .container .navbar .lists .button .signup {
+    cursor: pointer;
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 22px;
+    border-radius: 50px;
+    background-color: hsl(0deg, 0%, 100%);
+    color: hsl(356deg, 100%, 66%);
   }
 }
 .header .container .navbar .lists li {
@@ -88,38 +133,80 @@
 .header .container .navbar .lists li ul li a:hover {
   color: hsl(240deg, 10%, 16%);
 }
-.header .container .navbar .lists .button {
+.header .container .content {
+  padding: 150px 0;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.header .container .navbar .lists .button .login {
+@media (max-width: 991px) {
+  .header .container .content {
+    text-align: center;
+    padding: 100px 0 150px 0;
+  }
+}
+.header .container .content .main-title {
+  margin-bottom: 0.4rem;
+}
+.header .container .content .main-title h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 3.2rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+}
+@media (max-width: 991px) {
+  .header .container .content .main-title h1 {
+    font-size: 2.3rem;
+  }
+}
+.header .container .content .description {
+  margin-bottom: 2.5rem;
+}
+.header .container .content .description p {
+  color: #efeff1;
+  font-size: 1.15rem;
+}
+.header .container .content .main-btn {
+  display: flex;
+  gap: 1.2rem;
+}
+@media (max-width: 991px) {
+  .header .container .content .main-btn {
+    gap: 0.5rem;
+  }
+}
+.header .container .content .main-btn .start {
+  padding: 12px 15px;
+  background-color: #fff;
+  color: hsl(356deg, 100%, 66%);
+  font-size: 0.8rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+}
+.header .container .content .main-btn .start:hover {
+  background-color: hsl(355deg, 100%, 74%);
+  color: hsl(0deg, 0%, 100%);
+}
+.header .container .content .main-btn .learn {
+  padding: 12px 15px;
   background-color: transparent;
   color: hsl(0deg, 0%, 100%);
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 10px 22px;
+  font-size: 0.8rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
   border-radius: 50px;
-}
-.header .container .navbar .lists .button .signup {
+  border: 1px solid hsl(0deg, 0%, 100%);
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 10px 22px;
-  border-radius: 50px;
+}
+.header .container .content .main-btn .learn:hover {
   background-color: hsl(0deg, 0%, 100%);
-  color: hsl(356deg, 100%, 66%);
+  color: hsl(355deg, 100%, 74%);
 }
 
 @media (max-width: 991px) {
