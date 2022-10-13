@@ -67,22 +67,74 @@
                     a {
                         font-size: 1.2rem;
                         padding: 20px;
+                        color: $White;
                     }
 
                     ul {
                         position: absolute;
                         left: 0;
                         top: 150%;
-                        width: 168px;
-                        background-color: #efeff1;
-                        padding-top: 5px;
+                        width: 178px;
+                        background-color: #fff;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        padding-right: 60px;
                         display: none;
+                        border-radius: 15px;
 
                         li {
                             width: 100%;
+
+                            a {
+                                display: block;
+                                font-size: .9rem;
+                                padding: 8px 10px;
+                                color: $Very-dark-gray-blue;
+                                font-weight: 400;
+                                transition: all .2s ease-in-out;
+
+                                &:hover {
+                                    color: $Very-dark-black-blue;
+                                }
+                            }
                         }
                     }
+
+                    
                 }
+
+                .button {
+                    display: flex;
+
+                        .login {
+                            cursor: pointer;
+                            display: block;
+                            width: fit-content;
+                            background-color: transparent;
+                            color: $White;
+                            border: none;
+                            outline: none;
+                            font-size: 1rem;
+                            font-weight: bold; 
+                            padding: 10px 22px;
+                            border-radius: 50px;
+                        }
+
+                        .signup {
+                            cursor: pointer;
+                            display: block;
+                            width: fit-content;
+                            border: none;
+                            outline: none;
+                            font-size: 1rem;
+                            font-weight: bold; 
+                            padding: 10px 22px;
+                            border-radius: 50px;
+                            background-color: $White;
+                            color: $Light-red;
+
+                        }
+                    }
             }
         }
     }
@@ -174,10 +226,6 @@
                                 a {
                                     display: block;
                                     font-size: 1.2rem;
-                                    
-                                    &:not(:last-child) {
-                                        // padding-top: 0px;
-                                    }
                                 }
                             }
                         }
