@@ -1,0 +1,57 @@
+
+.footer {
+    width: 100%;
+    background-color: $Very-dark-gray-blue;
+    border-radius: 0 100px 0 0;
+
+    .container {
+        width: 90%;
+        margin-inline: auto;
+        display: grid;
+        
+        @include desktop {
+            padding: 70px 0;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 70px 0;
+            gap: 2.5rem;
+        }
+
+        @include small {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .col {
+
+            h3 {
+                color: $White;
+                font-family: $ff-overpass;
+                font-size: .9rem;
+                font-weight: $fw-600-overpass;
+                margin-bottom: 33px;
+            }
+
+            ul {
+
+                li {
+
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+
+                    a {
+                        display: block;
+                        color: $Grayish-blue;
+                    }
+                }
+            }
+        }
+    }
+}

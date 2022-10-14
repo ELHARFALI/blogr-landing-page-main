@@ -382,7 +382,7 @@
 .section-one .container .left .card p {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: hsl(237deg, 17%, 21%);
+  color: hsl(207deg, 13%, 34%);
 }
 .section-one .container .right {
   display: flex;
@@ -484,10 +484,63 @@
   }
 }
 
+@media (min-width: 992px) {
+  .section-three {
+    margin-bottom: 115px;
+  }
+}
 @media (max-width: 991px) {
   .section-three {
     padding-top: 100px !important;
+    margin-bottom: 100px;
   }
+}
+
+.footer {
+  width: 100%;
+  background-color: hsl(237deg, 17%, 21%);
+  border-radius: 0 100px 0 0;
+}
+.footer .container {
+  width: 90%;
+  margin-inline: auto;
+  display: grid;
+}
+@media (min-width: 992px) {
+  .footer .container {
+    padding: 70px 0;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 991px) {
+  .footer .container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 70px 0;
+    gap: 2.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+.footer .container .col h3 {
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Overpass", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 33px;
+}
+.footer .container .col ul li:not(:last-child) {
+  margin-bottom: 16px;
+}
+.footer .container .col ul li a {
+  display: block;
+  color: hsl(240deg, 2%, 79%);
 }
 
 * {

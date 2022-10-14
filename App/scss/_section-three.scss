@@ -1,7 +1,12 @@
 
 .section-three {
+
+    @include desktop {
+        margin-bottom: 115px;
+    }
     
     @include tablet {
         padding-top: 100px !important;
+        margin-bottom: 100px;
     }
 }
