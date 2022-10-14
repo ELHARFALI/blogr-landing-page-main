@@ -1,0 +1,7 @@
+
+.section-three {
+    
+    @include tablet {
+        padding-top: 100px !important;
+    }
+}
